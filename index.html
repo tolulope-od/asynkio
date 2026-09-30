@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asynk IO — Technology Built for What’s Next</title>
+    <meta
+      name="description"
+      content="We design, develop and deliver practical technology solutions for individuals, businesses and organisations."
+    />
+    <meta name="theme-color" content="#F5F5F1" />
+    <meta property="og:title" content="Asynk IO — Technology Built for What’s Next" />
+    <meta
+      property="og:description"
+      content="We design, develop and deliver practical technology solutions for individuals, businesses and organisations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo/lockup.svg" />
+    <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/pixelify-sans.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      /* Arms the scroll-reveal styles. Only added when the animation will
+         actually run, so a no-JS render and a reduced-motion render both show
+         every element instead of leaving the page blank. */
+      (function () {
+        var el = document.documentElement;
+        try {
+          if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+          el.classList.add("reveal-on");
+          setTimeout(function () {
+            if (!window.__asynkReveal) el.classList.remove("reveal-on");
+          }, 3000);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="styles/tokens.css?v=2" />
+    <link rel="stylesheet" href="styles/app.css?v=2" />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- PIXEL SPRITE:START -->
+<svg xmlns="http://www.w3.org/2000/svg" class="pixel-sprite" aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute">
+  <symbol id="px-chip" viewBox="0 0 12 12">
+    <rect x="4" y="0" width="1" height="1" fill="currentColor"/>
+    <rect x="7" y="0" width="1" height="1" fill="currentColor"/>
+    <rect x="4" y="1" width="1" height="1" fill="currentColor"/>
+    <rect x="7" y="1" width="1" height="1" fill="currentColor"/>
+    <rect x="2" y="2" width="8" height="1" fill="currentColor"/>
+    <rect x="2" y="3" width="1" height="1" fill="currentColor"/>
+    <rect x="9" y="3" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="4" width="3" height="1" fill="currentColor"/>
+    <rect x="4" y="4" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="9" y="4" width="3" height="1" fill="currentColor"/>
+    <rect x="0" y="5" width="3" height="1" fill="currentColor"/>
+    <rect x="4" y="5" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="9" y="5" width="3" height="1" fill="currentColor"/>
+    <rect x="0" y="6" width="3" height="1" fill="currentColor"/>
+    <rect x="4" y="6" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="9" y="6" width="3" height="1" fill="currentColor"/>
+    <rect x="0" y="7" width="3" height="1" fill="currentColor"/>
+    <rect x="4" y="7" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="9" y="7" width="3" height="1" fill="currentColor"/>
+    <rect x="2" y="8" width="1" height="1" fill="currentColor"/>
+    <rect x="9" y="8" width="1" height="1" fill="currentColor"/>
+    <rect x="2" y="9" width="8" height="1" fill="currentColor"/>
+    <rect x="4" y="10" width="1" height="1" fill="currentColor"/>
+    <rect x="7" y="10" width="1" height="1" fill="currentColor"/>
+    <rect x="4" y="11" width="1" height="1" fill="currentColor"/>
+    <rect x="7" y="11" width="1" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-blueprint" viewBox="0 0 12 12">
+    <rect x="0" y="0" width="12" height="1" fill="currentColor"/>
+    <rect x="0" y="1" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="1" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+    <rect x="4" y="2" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="11" y="2" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="3" width="1" height="1" fill="currentColor"/>
+    <rect x="4" y="3" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="11" y="3" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="4" width="1" height="1" fill="currentColor"/>
+    <rect x="5" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="11" y="4" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="5" width="1" height="1" fill="currentColor"/>
+    <rect x="5" y="5" width="2" height="1" fill="currentColor"/>
+    <rect x="11" y="5" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="6" width="1" height="1" fill="currentColor"/>
+    <rect x="3" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="7" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="11" y="6" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="7" width="1" height="1" fill="currentColor"/>
+    <rect x="3" y="7" width="1" height="1" fill="currentColor"/>
+    <rect x="8" y="7" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="7" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="8" width="1" height="1" fill="currentColor"/>
+    <rect x="2" y="8" width="3" height="1" fill="currentColor"/>
+    <rect x="7" y="8" width="3" height="1" fill="currentColor"/>
+    <rect x="11" y="8" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="9" width="1" height="1" fill="currentColor"/>
+    <rect x="2" y="9" width="3" height="1" fill="currentColor"/>
+    <rect x="7" y="9" width="3" height="1" fill="currentColor"/>
+    <rect x="11" y="9" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="10" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="10" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="11" width="12" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-stack" viewBox="0 0 12 12">
+    <rect x="0" y="0" width="12" height="1" fill="currentColor"/>
+    <rect x="0" y="1" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="1" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="2" width="12" height="1" fill="currentColor"/>
+    <rect x="0" y="4" width="12" height="1" fill="currentColor"/>
+    <rect x="0" y="5" width="1" height="1" fill="currentColor"/>
+    <rect x="3" y="5" width="6" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="11" y="5" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="6" width="12" height="1" fill="currentColor"/>
+    <rect x="0" y="8" width="12" height="1" fill="currentColor"/>
+    <rect x="0" y="9" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="9" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="10" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="10" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="11" width="12" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-telemetry" viewBox="0 0 12 12">
+    <rect x="0" y="0" width="12" height="1" fill="currentColor"/>
+    <rect x="0" y="1" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="1" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="2" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="2" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="3" width="1" height="1" fill="currentColor"/>
+    <rect x="6" y="3" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="11" y="3" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="4" width="1" height="1" fill="currentColor"/>
+    <rect x="6" y="4" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="11" y="4" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="5" width="1" height="1" fill="currentColor"/>
+    <rect x="6" y="5" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="11" y="5" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="6" width="1" height="1" fill="currentColor"/>
+    <rect x="4" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="6" y="6" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="11" y="6" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="7" width="1" height="1" fill="currentColor"/>
+    <rect x="4" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="6" y="7" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="8" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="11" y="7" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="8" width="1" height="1" fill="currentColor"/>
+    <rect x="2" y="8" width="4" height="1" fill="currentColor"/>
+    <rect x="6" y="8" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="8" y="8" width="2" height="1" fill="currentColor"/>
+    <rect x="11" y="8" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="9" width="1" height="1" fill="currentColor"/>
+    <rect x="2" y="9" width="4" height="1" fill="currentColor"/>
+    <rect x="6" y="9" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="8" y="9" width="2" height="1" fill="currentColor"/>
+    <rect x="11" y="9" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="10" width="1" height="1" fill="currentColor"/>
+    <rect x="11" y="10" width="1" height="1" fill="currentColor"/>
+    <rect x="0" y="11" width="12" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-spark" viewBox="0 0 12 12">
+    <rect x="5" y="0" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="1" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="2" width="4" height="1" fill="currentColor"/>
+    <rect x="4" y="3" width="4" height="1" fill="currentColor"/>
+    <rect x="0" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="3" y="4" width="6" height="1" fill="currentColor"/>
+    <rect x="10" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="0" y="5" width="3" height="1" fill="currentColor"/>
+    <rect x="4" y="5" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="9" y="5" width="3" height="1" fill="currentColor"/>
+    <rect x="0" y="6" width="3" height="1" fill="currentColor"/>
+    <rect x="4" y="6" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="9" y="6" width="3" height="1" fill="currentColor"/>
+    <rect x="0" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="3" y="7" width="6" height="1" fill="currentColor"/>
+    <rect x="10" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="8" width="4" height="1" fill="currentColor"/>
+    <rect x="4" y="9" width="4" height="1" fill="currentColor"/>
+    <rect x="5" y="10" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="11" width="2" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-network" viewBox="0 0 12 12">
+    <rect x="0" y="0" width="4" height="1" fill="currentColor"/>
+    <rect x="8" y="0" width="4" height="1" fill="currentColor"/>
+    <rect x="0" y="1" width="4" height="1" fill="currentColor"/>
+    <rect x="8" y="1" width="4" height="1" fill="currentColor"/>
+    <rect x="2" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="8" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="3" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="7" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="4" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="3" y="5" width="6" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="3" y="6" width="6" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="4" y="7" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="3" y="8" width="2" height="1" fill="currentColor"/>
+    <rect x="7" y="8" width="2" height="1" fill="currentColor"/>
+    <rect x="2" y="9" width="2" height="1" fill="currentColor"/>
+    <rect x="8" y="9" width="2" height="1" fill="currentColor"/>
+    <rect x="0" y="10" width="4" height="1" fill="currentColor"/>
+    <rect x="8" y="10" width="4" height="1" fill="currentColor"/>
+    <rect x="0" y="11" width="4" height="1" fill="currentColor"/>
+    <rect x="8" y="11" width="4" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-link" viewBox="0 0 12 12">
+    <rect x="1" y="2" width="6" height="1" fill="currentColor"/>
+    <rect x="1" y="3" width="1" height="1" fill="currentColor"/>
+    <rect x="6" y="3" width="1" height="1" fill="currentColor"/>
+    <rect x="1" y="4" width="1" height="1" fill="currentColor"/>
+    <rect x="6" y="4" width="1" height="1" fill="currentColor"/>
+    <rect x="1" y="5" width="1" height="1" fill="currentColor"/>
+    <rect x="5" y="5" width="6" height="1" fill="currentColor"/>
+    <rect x="1" y="6" width="1" height="1" fill="currentColor"/>
+    <rect x="5" y="6" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="9" y="6" width="1" height="1" fill="currentColor"/>
+    <rect x="1" y="7" width="6" height="1" fill="currentColor"/>
+    <rect x="10" y="7" width="1" height="1" fill="currentColor"/>
+    <rect x="5" y="8" width="1" height="1" fill="currentColor"/>
+    <rect x="10" y="8" width="1" height="1" fill="currentColor"/>
+    <rect x="5" y="9" width="1" height="1" fill="currentColor"/>
+    <rect x="10" y="9" width="1" height="1" fill="currentColor"/>
+    <rect x="5" y="10" width="6" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-prompt" viewBox="0 0 12 12">
+    <rect x="2" y="1" width="2" height="1" fill="currentColor"/>
+    <rect x="3" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="6" y="5" width="2" height="1" fill="currentColor"/>
+    <rect x="6" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="8" width="2" height="1" fill="currentColor"/>
+    <rect x="3" y="9" width="2" height="1" fill="currentColor"/>
+    <rect x="2" y="10" width="2" height="1" fill="currentColor"/>
+    <rect x="7" y="10" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  </symbol>
+  <symbol id="px-arrow-down" viewBox="0 0 12 12">
+    <rect x="5" y="1" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="5" width="2" height="1" fill="currentColor"/>
+    <rect x="5" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="2" y="7" width="8" height="1" fill="currentColor"/>
+    <rect x="3" y="8" width="6" height="1" fill="currentColor"/>
+    <rect x="4" y="9" width="4" height="1" fill="currentColor"/>
+    <rect x="5" y="10" width="2" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-arrow-right" viewBox="0 0 12 12">
+    <rect x="7" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="8" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="1" y="5" width="11" height="1" fill="currentColor"/>
+    <rect x="1" y="6" width="11" height="1" fill="currentColor"/>
+    <rect x="9" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="8" y="8" width="2" height="1" fill="currentColor"/>
+    <rect x="7" y="9" width="2" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-check" viewBox="0 0 12 12">
+    <rect x="10" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="8" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="1" y="5" width="2" height="1" fill="currentColor"/>
+    <rect x="8" y="5" width="2" height="1" fill="currentColor"/>
+    <rect x="2" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="7" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="3" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="6" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="8" width="3" height="1" fill="currentColor"/>
+    <rect x="5" y="9" width="1" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-shield" viewBox="0 0 12 12">
+    <rect x="2" y="1" width="8" height="1" fill="currentColor"/>
+    <rect x="1" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="0" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="10" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="0" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="10" y="4" width="2" height="1" fill="currentColor"/>
+    <rect x="0" y="5" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="5" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="10" y="5" width="2" height="1" fill="currentColor"/>
+    <rect x="0" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="6" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+    <rect x="10" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="1" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="2" y="8" width="2" height="1" fill="currentColor"/>
+    <rect x="8" y="8" width="2" height="1" fill="currentColor"/>
+    <rect x="3" y="9" width="2" height="1" fill="currentColor"/>
+    <rect x="7" y="9" width="2" height="1" fill="currentColor"/>
+    <rect x="4" y="10" width="4" height="1" fill="currentColor"/>
+    <rect x="5" y="11" width="2" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-bolt" viewBox="0 0 12 12">
+    <rect x="7" y="0" width="4" height="1" fill="currentColor"/>
+    <rect x="6" y="1" width="4" height="1" fill="currentColor"/>
+    <rect x="5" y="2" width="4" height="1" fill="currentColor"/>
+    <rect x="4" y="3" width="4" height="1" fill="currentColor"/>
+    <rect x="4" y="4" width="7" height="1" fill="currentColor"/>
+    <rect x="4" y="5" width="6" height="1" fill="currentColor"/>
+    <rect x="7" y="6" width="3" height="1" fill="currentColor"/>
+    <rect x="6" y="7" width="3" height="1" fill="currentColor"/>
+    <rect x="5" y="8" width="3" height="1" fill="currentColor"/>
+    <rect x="4" y="9" width="3" height="1" fill="currentColor"/>
+    <rect x="3" y="10" width="3" height="1" fill="currentColor"/>
+    <rect x="2" y="11" width="3" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-data" viewBox="0 0 12 12">
+    <rect x="2" y="1" width="8" height="1" fill="currentColor"/>
+    <rect x="1" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="2" width="2" height="1" fill="currentColor"/>
+    <rect x="1" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="3" width="2" height="1" fill="currentColor"/>
+    <rect x="1" y="4" width="10" height="1" fill="currentColor"/>
+    <rect x="1" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="6" width="2" height="1" fill="currentColor"/>
+    <rect x="1" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="7" width="2" height="1" fill="currentColor"/>
+    <rect x="1" y="8" width="10" height="1" fill="currentColor"/>
+    <rect x="1" y="10" width="2" height="1" fill="currentColor"/>
+    <rect x="9" y="10" width="2" height="1" fill="currentColor"/>
+    <rect x="1" y="11" width="10" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-asynk" viewBox="0 0 36 33">
+<rect x="28" y="0" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="15" y="1" width="5" height="1" fill="currentColor"/>
+  <rect x="27" y="1" width="5" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="14" y="2" width="7" height="1" fill="currentColor"/>
+  <rect x="27" y="2" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="31" y="2" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="13" y="3" width="8" height="1" fill="currentColor"/>
+  <rect x="27" y="3" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="31" y="3" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="13" y="4" width="9" height="1" fill="currentColor"/>
+  <rect x="27" y="4" width="5" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="12" y="5" width="10" height="1" fill="currentColor"/>
+  <rect x="27" y="5" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="12" y="6" width="11" height="1" fill="currentColor"/>
+  <rect x="26" y="6" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="12" y="7" width="5" height="1" fill="currentColor"/>
+  <rect x="18" y="7" width="5" height="1" fill="currentColor"/>
+  <rect x="25" y="7" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="11" y="8" width="6" height="1" fill="currentColor"/>
+  <rect x="18" y="8" width="4" height="1" fill="currentColor"/>
+  <rect x="24" y="8" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="10" y="9" width="6" height="1" fill="currentColor"/>
+  <rect x="19" y="9" width="2" height="1" fill="currentColor"/>
+  <rect x="23" y="9" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="27" y="9" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="10" y="10" width="6" height="1" fill="currentColor"/>
+  <rect x="19" y="10" width="1" height="1" fill="currentColor"/>
+  <rect x="22" y="10" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="26" y="10" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="9" y="11" width="6" height="1" fill="currentColor"/>
+  <rect x="21" y="11" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="25" y="11" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="9" y="12" width="6" height="1" fill="currentColor"/>
+  <rect x="21" y="12" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="24" y="12" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="8" y="13" width="6" height="1" fill="currentColor"/>
+  <rect x="20" y="13" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="23" y="13" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="26" y="13" width="1" height="1" fill="currentColor"/>
+  <rect x="8" y="14" width="6" height="1" fill="currentColor"/>
+  <rect x="20" y="14" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="26" y="14" width="2" height="1" fill="currentColor"/>
+  <rect x="7" y="15" width="6" height="1" fill="currentColor"/>
+  <rect x="16" y="15" width="2" height="1" fill="currentColor"/>
+  <rect x="19" y="15" width="2" height="1" fill="currentColor"/>
+  <rect x="25" y="15" width="3" height="1" fill="currentColor"/>
+  <rect x="7" y="16" width="6" height="1" fill="currentColor"/>
+  <rect x="15" y="16" width="5" height="1" fill="currentColor"/>
+  <rect x="24" y="16" width="5" height="1" fill="currentColor"/>
+  <rect x="6" y="17" width="6" height="1" fill="currentColor"/>
+  <rect x="14" y="17" width="2" height="1" fill="currentColor"/>
+  <rect x="18" y="17" width="2" height="1" fill="currentColor"/>
+  <rect x="23" y="17" width="6" height="1" fill="currentColor"/>
+  <rect x="6" y="18" width="6" height="1" fill="currentColor"/>
+  <rect x="14" y="18" width="2" height="1" fill="currentColor"/>
+  <rect x="18" y="18" width="2" height="1" fill="currentColor"/>
+  <rect x="22" y="18" width="8" height="1" fill="currentColor"/>
+  <rect x="5" y="19" width="6" height="1" fill="currentColor"/>
+  <rect x="14" y="19" width="5" height="1" fill="currentColor"/>
+  <rect x="21" y="19" width="3" height="1" fill="currentColor"/>
+  <rect x="25" y="19" width="5" height="1" fill="currentColor"/>
+  <rect x="5" y="20" width="6" height="1" fill="currentColor"/>
+  <rect x="13" y="20" width="6" height="1" fill="currentColor"/>
+  <rect x="21" y="20" width="2" height="1" fill="currentColor"/>
+  <rect x="25" y="20" width="6" height="1" fill="currentColor"/>
+  <rect x="4" y="21" width="6" height="1" fill="currentColor"/>
+  <rect x="12" y="21" width="3" height="1" fill="currentColor"/>
+  <rect x="20" y="21" width="2" height="1" fill="currentColor"/>
+  <rect x="26" y="21" width="5" height="1" fill="currentColor"/>
+  <rect x="4" y="22" width="5" height="1" fill="currentColor"/>
+  <rect x="11" y="22" width="3" height="1" fill="currentColor"/>
+  <rect x="18" y="22" width="3" height="1" fill="currentColor"/>
+  <rect x="26" y="22" width="6" height="1" fill="currentColor"/>
+  <rect x="3" y="23" width="5" height="1" fill="currentColor"/>
+  <rect x="10" y="23" width="3" height="1" fill="currentColor"/>
+  <rect x="15" y="23" width="5" height="1" fill="currentColor"/>
+  <rect x="27" y="23" width="5" height="1" fill="currentColor"/>
+  <rect x="3" y="24" width="4" height="1" fill="currentColor"/>
+  <rect x="9" y="24" width="3" height="1" fill="currentColor"/>
+  <rect x="14" y="24" width="6" height="1" fill="currentColor"/>
+  <rect x="27" y="24" width="6" height="1" fill="currentColor"/>
+  <rect x="2" y="25" width="4" height="1" fill="currentColor"/>
+  <rect x="9" y="25" width="2" height="1" fill="currentColor"/>
+  <rect x="13" y="25" width="6" height="1" fill="currentColor"/>
+  <rect x="28" y="25" width="5" height="1" fill="currentColor"/>
+  <rect x="2" y="26" width="1" height="1" fill="currentColor"/>
+  <rect x="8" y="26" width="2" height="1" fill="currentColor"/>
+  <rect x="12" y="26" width="6" height="1" fill="currentColor"/>
+  <rect x="28" y="26" width="6" height="1" fill="currentColor"/>
+  <rect x="1" y="27" width="1" height="1" fill="currentColor"/>
+  <rect x="5" y="27" width="4" height="1" fill="currentColor"/>
+  <rect x="16" y="27" width="1" height="1" fill="currentColor"/>
+  <rect x="29" y="27" width="5" height="1" fill="currentColor"/>
+  <rect x="1" y="28" width="1" height="1" fill="currentColor"/>
+  <rect x="3" y="28" width="5" height="1" fill="currentColor"/>
+  <rect x="29" y="28" width="6" height="1" fill="currentColor"/>
+  <rect x="0" y="29" width="2" height="1" fill="currentColor"/>
+  <rect x="3" y="29" width="2" height="1" fill="currentColor"/>
+  <rect x="7" y="29" width="1" height="1" fill="currentColor"/>
+  <rect x="30" y="29" width="5" height="1" fill="currentColor"/>
+  <rect x="3" y="30" width="2" height="1" fill="currentColor"/>
+  <rect x="7" y="30" width="1" height="1" fill="currentColor"/>
+  <rect x="31" y="30" width="4" height="1" fill="currentColor"/>
+  <rect x="3" y="31" width="5" height="1" fill="currentColor"/>
+  <rect x="4" y="32" width="3" height="1" fill="currentColor"/>
+  </symbol>
+  <symbol id="px-asynk-word" viewBox="0 0 88 23">
+<rect x="7" y="0" width="3" height="1" fill="currentColor"/>
+  <rect x="54" y="0" width="2" height="1" fill="currentColor"/>
+  <rect x="66" y="0" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="76" y="0" width="6" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="7" y="1" width="4" height="1" fill="currentColor"/>
+  <rect x="53" y="1" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="1" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="75" y="1" width="9" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="6" y="2" width="5" height="1" fill="currentColor"/>
+  <rect x="53" y="2" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="2" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="73" y="2" width="12" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="6" y="3" width="6" height="1" fill="currentColor"/>
+  <rect x="53" y="3" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="3" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="72" y="3" width="6" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="80" y="3" width="6" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="5" y="4" width="7" height="1" fill="currentColor"/>
+  <rect x="53" y="4" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="4" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="72" y="4" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="82" y="4" width="5" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="5" y="5" width="3" height="1" fill="currentColor"/>
+  <rect x="9" y="5" width="3" height="1" fill="currentColor"/>
+  <rect x="21" y="5" width="3" height="1" fill="currentColor"/>
+  <rect x="46" y="5" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="5" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="5" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="71" y="5" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="83" y="5" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="5" y="6" width="3" height="1" fill="currentColor"/>
+  <rect x="9" y="6" width="4" height="1" fill="currentColor"/>
+  <rect x="19" y="6" width="7" height="1" fill="currentColor"/>
+  <rect x="28" y="6" width="3" height="1" fill="currentColor"/>
+  <rect x="37" y="6" width="3" height="1" fill="currentColor"/>
+  <rect x="41" y="6" width="3" height="1" fill="currentColor"/>
+  <rect x="45" y="6" width="6" height="1" fill="currentColor"/>
+  <rect x="53" y="6" width="4" height="1" fill="currentColor"/>
+  <rect x="60" y="6" width="3" height="1" fill="currentColor"/>
+  <rect x="66" y="6" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="71" y="6" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="84" y="6" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="4" y="7" width="4" height="1" fill="currentColor"/>
+  <rect x="10" y="7" width="3" height="1" fill="currentColor"/>
+  <rect x="18" y="7" width="9" height="1" fill="currentColor"/>
+  <rect x="28" y="7" width="4" height="1" fill="currentColor"/>
+  <rect x="36" y="7" width="4" height="1" fill="currentColor"/>
+  <rect x="41" y="7" width="10" height="1" fill="currentColor"/>
+  <rect x="53" y="7" width="4" height="1" fill="currentColor"/>
+  <rect x="59" y="7" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="7" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="70" y="7" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="84" y="7" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="4" y="8" width="3" height="1" fill="currentColor"/>
+  <rect x="10" y="8" width="4" height="1" fill="currentColor"/>
+  <rect x="18" y="8" width="3" height="1" fill="currentColor"/>
+  <rect x="24" y="8" width="3" height="1" fill="currentColor"/>
+  <rect x="29" y="8" width="3" height="1" fill="currentColor"/>
+  <rect x="36" y="8" width="3" height="1" fill="currentColor"/>
+  <rect x="41" y="8" width="4" height="1" fill="currentColor"/>
+  <rect x="48" y="8" width="4" height="1" fill="currentColor"/>
+  <rect x="53" y="8" width="4" height="1" fill="currentColor"/>
+  <rect x="58" y="8" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="8" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="70" y="8" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="85" y="8" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="3" y="9" width="4" height="1" fill="currentColor"/>
+  <rect x="11" y="9" width="3" height="1" fill="currentColor"/>
+  <rect x="18" y="9" width="3" height="1" fill="currentColor"/>
+  <rect x="29" y="9" width="3" height="1" fill="currentColor"/>
+  <rect x="36" y="9" width="3" height="1" fill="currentColor"/>
+  <rect x="41" y="9" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="9" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="9" width="8" height="1" fill="currentColor"/>
+  <rect x="66" y="9" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="70" y="9" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="85" y="9" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="3" y="10" width="4" height="1" fill="currentColor"/>
+  <rect x="11" y="10" width="3" height="1" fill="currentColor"/>
+  <rect x="18" y="10" width="6" height="1" fill="currentColor"/>
+  <rect x="30" y="10" width="3" height="1" fill="currentColor"/>
+  <rect x="35" y="10" width="4" height="1" fill="currentColor"/>
+  <rect x="41" y="10" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="10" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="10" width="7" height="1" fill="currentColor"/>
+  <rect x="66" y="10" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="70" y="10" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="84" y="10" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="3" y="11" width="3" height="1" fill="currentColor"/>
+  <rect x="11" y="11" width="4" height="1" fill="currentColor"/>
+  <rect x="19" y="11" width="7" height="1" fill="currentColor"/>
+  <rect x="30" y="11" width="3" height="1" fill="currentColor"/>
+  <rect x="35" y="11" width="3" height="1" fill="currentColor"/>
+  <rect x="41" y="11" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="11" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="11" width="7" height="1" fill="currentColor"/>
+  <rect x="66" y="11" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="71" y="11" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="84" y="11" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="2" y="12" width="13" height="1" fill="currentColor"/>
+  <rect x="21" y="12" width="6" height="1" fill="currentColor"/>
+  <rect x="30" y="12" width="3" height="1" fill="currentColor"/>
+  <rect x="35" y="12" width="3" height="1" fill="currentColor"/>
+  <rect x="41" y="12" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="12" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="12" width="7" height="1" fill="currentColor"/>
+  <rect x="66" y="12" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="71" y="12" width="2" height="1" fill="currentColor"/>
+  <rect x="73" y="12" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="84" y="12" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="2" y="13" width="14" height="1" fill="currentColor"/>
+  <rect x="24" y="13" width="4" height="1" fill="currentColor"/>
+  <rect x="31" y="13" width="6" height="1" fill="currentColor"/>
+  <rect x="41" y="13" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="13" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="13" width="8" height="1" fill="currentColor"/>
+  <rect x="66" y="13" width="3" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="71" y="13" width="4" height="1" fill="currentColor"/>
+  <rect x="83" y="13" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="2" y="14" width="14" height="1" fill="currentColor"/>
+  <rect x="19" y="14" width="1" height="1" fill="currentColor"/>
+  <rect x="25" y="14" width="3" height="1" fill="currentColor"/>
+  <rect x="31" y="14" width="6" height="1" fill="currentColor"/>
+  <rect x="41" y="14" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="14" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="14" width="4" height="1" fill="currentColor"/>
+  <rect x="58" y="14" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="14" width="1" height="1" fill="currentColor"/>
+  <rect x="67" y="14" width="1" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="68" y="14" width="1" height="1" fill="currentColor"/>
+  <rect x="72" y="14" width="4" height="1" fill="currentColor"/>
+  <rect x="82" y="14" width="4" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="1" y="15" width="4" height="1" fill="currentColor"/>
+  <rect x="13" y="15" width="3" height="1" fill="currentColor"/>
+  <rect x="18" y="15" width="3" height="1" fill="currentColor"/>
+  <rect x="24" y="15" width="4" height="1" fill="currentColor"/>
+  <rect x="32" y="15" width="5" height="1" fill="currentColor"/>
+  <rect x="41" y="15" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="15" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="15" width="4" height="1" fill="currentColor"/>
+  <rect x="59" y="15" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="15" width="3" height="1" fill="currentColor"/>
+  <rect x="73" y="15" width="7" height="1" fill="currentColor"/>
+  <rect x="80" y="15" width="6" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="1" y="16" width="3" height="1" fill="currentColor"/>
+  <rect x="13" y="16" width="4" height="1" fill="currentColor"/>
+  <rect x="18" y="16" width="9" height="1" fill="currentColor"/>
+  <rect x="32" y="16" width="4" height="1" fill="currentColor"/>
+  <rect x="41" y="16" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="16" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="16" width="4" height="1" fill="currentColor"/>
+  <rect x="60" y="16" width="3" height="1" fill="currentColor"/>
+  <rect x="66" y="16" width="3" height="1" fill="currentColor"/>
+  <rect x="74" y="16" width="8" height="1" fill="currentColor"/>
+  <rect x="82" y="16" width="2" height="1" fill="var(--px-accent, currentColor)"/>
+  <rect x="0" y="17" width="4" height="1" fill="currentColor"/>
+  <rect x="13" y="17" width="4" height="1" fill="currentColor"/>
+  <rect x="19" y="17" width="7" height="1" fill="currentColor"/>
+  <rect x="32" y="17" width="4" height="1" fill="currentColor"/>
+  <rect x="41" y="17" width="3" height="1" fill="currentColor"/>
+  <rect x="49" y="17" width="3" height="1" fill="currentColor"/>
+  <rect x="53" y="17" width="4" height="1" fill="currentColor"/>
+  <rect x="60" y="17" width="4" height="1" fill="currentColor"/>
+  <rect x="66" y="17" width="3" height="1" fill="currentColor"/>
+  <rect x="75" y="17" width="8" height="1" fill="currentColor"/>
+  <rect x="22" y="18" width="1" height="1" fill="currentColor"/>
+  <rect x="32" y="18" width="3" height="1" fill="currentColor"/>
+  <rect x="79" y="18" width="1" height="1" fill="currentColor"/>
+  <rect x="31" y="19" width="4" height="1" fill="currentColor"/>
+  <rect x="29" y="20" width="6" height="1" fill="currentColor"/>
+  <rect x="29" y="21" width="5" height="1" fill="currentColor"/>
+  <rect x="29" y="22" width="3" height="1" fill="currentColor"/>
+  </symbol>
+</svg>
+<!-- PIXEL SPRITE:END -->
+
+    <!-- ==================================================================
+         HEADER
+         ================================================================== -->
+    <header class="header">
+      <div class="wrap header__inner">
+        <a class="brand" href="#top">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 36 33"><use href="#px-asynk" /></svg>
+          </span>
+          <span class="brand__text">
+            <svg class="brand__word" viewBox="0 0 88 23" role="img" aria-label="Asynk IO">
+              <use href="#px-asynk-word" />
+            </svg>
+            <span class="brand__sub">Technology solutions for what’s next</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#services" data-nav="services">What We Do</a>
+          <a href="#process" data-nav="process">How We Work</a>
+          <a href="#why" data-nav="why">Why Us</a>
+          <a href="#console" data-nav="console">Explore</a>
+          <a href="#faq" data-nav="faq">FAQs</a>
+          <a href="#contact" data-nav="contact">Contact</a>
+        </nav>
+
+        <div class="header__actions">
+          <span class="status">WEB · MOBILE · CLOUD</span>
+          <a class="btn btn--ghost btn--sm" href="#contact">Start a Project</a>
+          <button
+            class="menu-btn"
+            type="button"
+            id="menu-btn"
+            aria-expanded="false"
+            aria-controls="drawer"
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+
+      <div class="drawer" id="drawer" data-open="false">
+        <ul>
+          <li><a href="#services">What We Do <span class="mono">01</span></a></li>
+          <li><a href="#process">How We Work <span class="mono">02</span></a></li>
+          <li><a href="#why">Why Us <span class="mono">03</span></a></li>
+          <li><a href="#console">Explore <span class="mono">04</span></a></li>
+          <li><a href="#faq">FAQs <span class="mono">05</span></a></li>
+          <li><a href="#contact">Contact <span class="mono">06</span></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ================================================================
+           HERO
+           ================================================================ -->
+      <section class="hero wrap" id="top">
+        <div class="ribbon">
+          <div class="ribbon__meta">
+            <span>CUSTOM SOFTWARE</span>
+            <span class="ribbon__sep">|</span>
+            <span>CONSULTING</span>
+            <span class="ribbon__sep">|</span>
+            <span style="color: var(--cyan)">ONGOING SUPPORT</span>
+          </div>
+        </div>
+
+        <p class="eyebrow" data-reveal>
+          <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-spark" /></svg>
+          Practical technology solutions
+        </p>
+
+        <h1 class="display" data-reveal style="margin-top: var(--s-4); max-width: 20ch">
+          Technology built for <span class="hl">what’s next.</span>
+        </h1>
+
+        <p class="lede" data-reveal style="margin-top: var(--s-5)">
+          We design, develop and deliver practical technology solutions for individuals,
+          businesses and organisations.
+        </p>
+
+        <div class="hero__actions" data-reveal>
+          <a class="btn btn--primary" href="#services">
+            <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-blueprint" /></svg>
+            See What We Do
+          </a>
+          <a class="btn btn--ghost" href="#contact">
+            <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-arrow-right" /></svg>
+            Start a Project
+          </a>
+          <a class="btn btn--quiet" href="#faq">
+            Read the FAQs
+            <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-arrow-down" /></svg>
+          </a>
+        </div>
+
+        <!-- Four ways in, each linking to the detail below. -->
+        <div class="quick">
+          <a class="quick__card" data-reveal href="#services">
+            <span class="px-badge px-badge--lime" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-chip" /></svg>
+            </span>
+            <span class="quick__title">Build</span>
+            <span class="quick__note">Custom software &amp; digital platforms</span>
+          </a>
+          <a class="quick__card" data-reveal href="#services">
+            <span class="px-badge px-badge--cyan" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-blueprint" /></svg>
+            </span>
+            <span class="quick__title">Advise</span>
+            <span class="quick__note">Consulting &amp; digital transformation</span>
+          </a>
+          <a class="quick__card" data-reveal href="#services">
+            <span class="px-badge px-badge--violet" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-network" /></svg>
+            </span>
+            <span class="quick__title">Connect</span>
+            <span class="quick__note">Systems integration &amp; implementation</span>
+          </a>
+          <a class="quick__card" data-reveal href="#services">
+            <span class="px-badge" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-telemetry" /></svg>
+            </span>
+            <span class="quick__title">Support</span>
+            <span class="quick__note">Maintenance &amp; training</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           WHAT WE DO
+           ================================================================ -->
+      <section class="section wrap" id="services">
+        <div class="section__head" data-reveal>
+          <div class="section__title">
+            <p class="eyebrow eyebrow--lime">
+              <span class="dot" aria-hidden="true"></span>
+              Our Services
+            </p>
+            <h2 class="h2">What We Do</h2>
+            <p class="body">
+              Seven ways we help you plan, build and run technology — from a first idea
+              through to long-term support.
+            </p>
+          </div>
+        </div>
+
+        <div class="services">
+          <article class="service service--lime" data-reveal>
+            <span class="px-badge px-badge--lime" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-chip" /></svg>
+            </span>
+            <h3 class="service__title">Custom Software &amp; Digital Platforms</h3>
+            <p class="service__desc">
+              Build web, mobile and business applications tailored to your needs.
+            </p>
+          </article>
+
+          <article class="service service--cyan" data-reveal>
+            <span class="px-badge px-badge--cyan" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-blueprint" /></svg>
+            </span>
+            <h3 class="service__title">Technology Consulting &amp; Digital Transformation</h3>
+            <p class="service__desc">
+              Turn complex challenges into clear, effective technology strategies.
+            </p>
+          </article>
+
+          <article class="service service--violet" data-reveal>
+            <span class="px-badge px-badge--violet" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-stack" /></svg>
+            </span>
+            <h3 class="service__title">Product Development &amp; Licensing</h3>
+            <p class="service__desc">
+              Create, customise and improve software products, digital tools and
+              technology platforms.
+            </p>
+          </article>
+
+          <article class="service service--cyan" data-reveal>
+            <span class="px-badge px-badge--cyan" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-network" /></svg>
+            </span>
+            <h3 class="service__title">Systems Integration &amp; Implementation</h3>
+            <p class="service__desc">
+              Connect technologies, platforms and processes to work seamlessly together.
+            </p>
+          </article>
+
+          <article class="service service--ink" data-reveal>
+            <span class="px-badge" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-telemetry" /></svg>
+            </span>
+            <h3 class="service__title">Support, Maintenance &amp; Training</h3>
+            <p class="service__desc">
+              Keep your systems running smoothly with ongoing technical support and user
+              training.
+            </p>
+          </article>
+
+          <article class="service service--lime" data-reveal>
+            <span class="px-badge px-badge--lime" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-spark" /></svg>
+            </span>
+            <h3 class="service__title">Innovation &amp; Emerging Technologies</h3>
+            <p class="service__desc">
+              Explore and apply new technologies to create smarter products and services.
+            </p>
+          </article>
+
+          <article class="service service--lime" data-reveal>
+            <span class="px-badge px-badge--lime" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-link" /></svg>
+            </span>
+            <h3 class="service__title">Partnerships &amp; Collaborations</h3>
+            <p class="service__desc">
+              Work with technology providers and industry leaders to deliver stronger
+              solutions.
+            </p>
+          </article>
+        </div>
+
+        <p class="statement" data-reveal>
+          <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-arrow-right" /></svg>
+          From idea to implementation, we create technology that helps your business grow.
+        </p>
+      </section>
+
+      <!-- ================================================================
+           HOW WE WORK
+           ================================================================ -->
+      <section class="section wrap" id="process">
+        <div class="panel panel--dots">
+          <div class="panel__head" data-reveal>
+            <div class="section__title">
+              <p class="eyebrow">
+                <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-data" /></svg>
+                How We Work
+              </p>
+              <h2 class="h2">From Idea to Implementation</h2>
+              <p class="body" style="max-width: 62ch">
+                A straightforward process, reviewed with you at every stage — no jargon,
+                no surprises.
+              </p>
+            </div>
+            <p class="pill pill--bare">
+              <span class="mono" style="color: var(--ink-3)">Working style:</span>
+              <span class="tag tag--accent" style="font-family: var(--font-mono)">SIX CLEAR STAGES</span>
+            </p>
+          </div>
+
+          <div class="stepper">
+            <article class="step" data-reveal>
+              <div>
+                <span class="step__n">Stage 01</span>
+                <h3 class="step__name">Idea</h3>
+                <p class="step__desc">We listen, ask questions and get to grips with the problem.</p>
+              </div>
+              <footer class="step__foot"><span>Discovery</span><span>01</span></footer>
+            </article>
+            <article class="step" data-reveal>
+              <div>
+                <span class="step__n">Stage 02</span>
+                <h3 class="step__name">Strategy</h3>
+                <p class="step__desc">We turn complex challenges into a clear, costed plan.</p>
+              </div>
+              <footer class="step__foot"><span>Planning</span><span>02</span></footer>
+            </article>
+            <article class="step" data-reveal>
+              <div>
+                <span class="step__n">Stage 03</span>
+                <h3 class="step__name">Design</h3>
+                <p class="step__desc">We shape the right solution and agree how it will work.</p>
+              </div>
+              <footer class="step__foot"><span>Design</span><span>03</span></footer>
+            </article>
+            <article class="step" data-reveal>
+              <div>
+                <span class="step__n">Stage 04</span>
+                <h3 class="step__name">Build</h3>
+                <p class="step__desc">We develop and test web, mobile and business applications.</p>
+              </div>
+              <footer class="step__foot"><span>Development</span><span>04</span></footer>
+            </article>
+            <article class="step" data-reveal>
+              <div>
+                <span class="step__n">Stage 05</span>
+                <h3 class="step__name">Connect</h3>
+                <p class="step__desc">We integrate with your existing systems and get everything live.</p>
+              </div>
+              <footer class="step__foot"><span>Launch</span><span>05</span></footer>
+            </article>
+            <article class="step" data-reveal>
+              <div>
+                <span class="step__n">Stage 06</span>
+                <h3 class="step__name">Support</h3>
+                <p class="step__desc">We maintain, improve and train your team as you grow.</p>
+              </div>
+              <footer class="step__foot"><span>Ongoing</span><span>06</span></footer>
+            </article>
+          </div>
+
+          <div class="topology" data-reveal>
+            <div>
+              <p class="eyebrow" style="color: var(--ink)">
+                <span class="dot dot--cyan" aria-hidden="true"></span>
+                How we work together
+              </p>
+              <p class="body" style="margin-top: var(--s-3); max-width: 56ch">
+                You work directly with the people building your software. Progress is shared
+                in reviewable stages, so you always know where things stand.
+              </p>
+              <div class="topology__metrics">
+                <div>
+                  <span class="metric__k">Working style</span>
+                  <span class="metric__v">Direct access</span>
+                </div>
+                <div>
+                  <span class="metric__k">Delivery</span>
+                  <span class="metric__v cyan">Reviewable stages</span>
+                </div>
+                <div>
+                  <span class="metric__k">Handover</span>
+                  <span class="metric__v violet">Docs &amp; training</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="topology__diagram">
+              <svg viewBox="0 0 360 120" role="img" aria-label="Flow from idea and strategy, through design and build, to a live system with ongoing support.">
+                <path class="topo-line" d="M 30 60 H 100 L 140 25 H 220 L 260 60 H 330" />
+                <path class="topo-line" d="M 100 60 L 140 95 H 220 L 260 60" />
+                <path class="topo-line--live" d="M 30 60 H 120 L 150 40 H 210 L 240 60 H 330" />
+                <circle class="topo-node--lime" cx="30" cy="60" r="5" />
+                <circle class="topo-node" cx="100" cy="60" r="4" />
+                <circle class="topo-node--violet" cx="140" cy="25" r="4" />
+                <circle class="topo-node--violet" cx="220" cy="25" r="4" />
+                <circle class="topo-node--cyan" cx="140" cy="95" r="4" />
+                <circle class="topo-node--cyan" cx="220" cy="95" r="4" />
+                <circle class="topo-node" cx="260" cy="60" r="4" />
+                <circle class="topo-node--lime" cx="330" cy="60" r="5" />
+                <text class="topo-label" x="18" y="80">IDEA</text>
+                <text class="topo-label" x="146" y="18">STRATEGY / DESIGN</text>
+                <text class="topo-label" x="152" y="114">BUILD &amp; TEST</text>
+                <text class="topo-label" x="296" y="80">LIVE</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           WHY US
+           ================================================================ -->
+      <section class="section wrap" id="why">
+        <div class="section__head" data-reveal>
+          <div class="section__title">
+            <p class="eyebrow">
+              <span class="dot dot--cyan" aria-hidden="true"></span>
+              Why Work With Us
+            </p>
+            <h2 class="h2">Practical Technology, Done Properly</h2>
+            <p class="body">
+              We focus on the problem in front of you, and build technology that fits the
+              way you already work.
+            </p>
+          </div>
+        </div>
+
+        <div class="phases">
+          <article class="phase phase--lime" data-reveal>
+            <div>
+              <span class="px-badge px-badge--lime" aria-hidden="true">
+                <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-blueprint" /></svg>
+              </span>
+              <h3 class="phase__title">Clear, practical strategies</h3>
+              <p class="phase__desc">
+                Turn complex challenges into clear, effective technology strategies.
+              </p>
+            </div>
+          </article>
+
+          <article class="phase" data-reveal>
+            <div>
+              <span class="px-badge px-badge--cyan" aria-hidden="true">
+                <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-stack" /></svg>
+              </span>
+              <h3 class="phase__title">Built to fit</h3>
+              <p class="phase__desc">
+                Create, customise and improve software products, digital tools and
+                technology platforms.
+              </p>
+            </div>
+          </article>
+
+          <article class="phase phase--violet" data-reveal>
+            <div>
+              <span class="px-badge" aria-hidden="true">
+                <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-telemetry" /></svg>
+              </span>
+              <h3 class="phase__title">Here after launch</h3>
+              <p class="phase__desc">
+                Keep your systems running smoothly with ongoing technical support and user
+                training.
+              </p>
+            </div>
+          </article>
+
+          <article class="phase phase--ink" data-reveal>
+            <div>
+              <span class="px-badge px-badge--violet" aria-hidden="true">
+                <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-link" /></svg>
+              </span>
+              <h3 class="phase__title">Partnerships that last</h3>
+              <p class="phase__desc">
+                Work with technology providers and industry leaders to deliver stronger
+                solutions.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="compliance" data-reveal>
+          <div class="compliance__lead">
+            <span class="px-badge" aria-hidden="true">
+              <svg aria-hidden="true" class="px px--md" viewBox="0 0 12 12"><use href="#px-check" /></svg>
+            </span>
+            <div>
+              <h3 class="h4" style="text-transform: uppercase; letter-spacing: 0.04em">
+                Areas we cover
+              </h3>
+              <p class="body--sm" style="margin-top: 4px">
+                Whatever the stack, we can help you plan it, build it and keep it running.
+              </p>
+            </div>
+          </div>
+          <div class="compliance__badges">
+            <span class="tag">Web applications</span>
+            <span class="tag">Mobile apps</span>
+            <span class="tag">Business systems</span>
+            <span class="tag">Cloud &amp; hosting</span>
+            <span class="tag">Integrations</span>
+            <span class="tag">Support &amp; training</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           EXPLORE (console)
+           ================================================================ -->
+      <section class="section wrap" id="console">
+        <div class="section__head" data-reveal>
+          <div class="section__title">
+            <p class="eyebrow">
+              <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-prompt" /></svg>
+              Explore
+            </p>
+            <h2 class="h2">Browse What We Do</h2>
+            <p class="body">
+              Not sure where to start? Pick a command to see how we can help. It all runs
+              in your browser — nothing is sent anywhere.
+            </p>
+          </div>
+          <div class="annotation" aria-hidden="true">
+            <div>
+              <p class="hand" style="margin: 0">Go ahead, type a command.<br />It actually works.</p>
+            </div>
+            <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-arrow-down" /></svg>
+          </div>
+        </div>
+
+        <div class="console" data-reveal>
+          <div class="console__bar">
+            <div class="row" style="gap: 0; min-width: 0">
+              <span class="console__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="console__title">asynk — explore://services</span>
+            </div>
+            <div class="console__barright">
+              <span>RUNS LOCALLY</span>
+              <span style="color: var(--term-line)">|</span>
+              <span style="color: var(--term-lime)">NO DATA SENT</span>
+            </div>
+          </div>
+
+          <div class="console__quick">
+            <span class="mono mono--sm">Try:</span>
+            <button class="cmd" type="button" data-cmd="services">$ asynk services</button>
+            <button class="cmd cmd--cyan" type="button" data-cmd="process">$ asynk process</button>
+            <button class="cmd cmd--violet" type="button" data-cmd="support">$ asynk support</button>
+            <button class="cmd cmd--ink" type="button" data-cmd="contact">$ asynk contact</button>
+            <button class="cmd cmd--clear" type="button" data-cmd="clear">clear</button>
+          </div>
+
+          <div
+            class="console__body"
+            id="console-body"
+            role="log"
+            aria-live="polite"
+            aria-label="Console output"
+            tabindex="0"
+          >
+            <div class="line line--dim">Asynk IO — service explorer</div>
+            <div class="line line--dim">Type a command, or pick one above.</div>
+            <div class="line line--ok">ready.</div>
+            <div class="line" style="margin-top: 10px"><span class="prompt">guest@asynk<span class="prompt__path">:~$</span></span> <span>asynk services</span></div>
+            <div class="line--block">[1] Custom Software &amp; Digital Platforms<br>[2] Technology Consulting &amp; Digital Transformation<br>[3] Product Development &amp; Licensing<br>[4] Systems Integration &amp; Implementation<br>[5] Support, Maintenance &amp; Training<br>[6] Innovation &amp; Emerging Technologies<br>[7] Partnerships &amp; Collaborations</div>
+          </div>
+
+          <form class="console__input" id="console-form">
+            <label class="sr" for="console-input">Console command</label>
+            <span class="prompt" aria-hidden="true">guest@asynk<span class="prompt__path">:~$</span></span>
+            <input
+              id="console-input"
+              name="command"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Type: services, process, support, contact, help…"
+            />
+            <button class="console__run" type="submit">Run</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           CONTACT
+           ================================================================ -->
+      <section class="section wrap" id="contact">
+        <div class="engage">
+          <div class="stack gap-4" data-reveal>
+            <p class="eyebrow eyebrow--lime">
+              <span class="dot" aria-hidden="true"></span>
+              Get in Touch
+            </p>
+            <h2 class="h2" style="max-width: 18ch">Tell us what you’re working on.</h2>
+            <p class="body">
+              Send us a short note about your project and we’ll come back with a clear next
+              step — whether that’s a quote, a plan, or an honest “you don’t need us for
+              this”.
+            </p>
+            <div class="engage__facts">
+              <div>
+                <span class="metric__k">First step</span>
+                <span class="metric__v">A short conversation</span>
+                <p class="body--sm" style="margin-top: 4px">About your goals and constraints</p>
+              </div>
+              <div>
+                <span class="metric__k">What to include</span>
+                <span class="metric__v">Whatever you have</span>
+                <p class="body--sm" style="margin-top: 4px">A rough idea is plenty to start</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="form" data-reveal id="contact-form" novalidate>
+            <div class="form__head">
+              <span class="mono" style="color: var(--cyan)">Project enquiry</span>
+              <span class="mono" style="color: var(--ink-3)">Name &amp; email required</span>
+            </div>
+
+            <div class="form__row form__row--2">
+              <div class="field" data-field="name">
+                <label for="f-name">Your name</label>
+                <input id="f-name" name="name" type="text" placeholder="Jane Doe" required />
+                <span class="field__error" data-error></span>
+              </div>
+              <div class="field" data-field="email">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" placeholder="jane@company.com" required />
+                <span class="field__error" data-error></span>
+              </div>
+            </div>
+
+            <div class="field" data-field="topic">
+              <label for="f-topic">What do you need help with?</label>
+              <select id="f-topic" name="topic">
+                <option value="software">Custom Software &amp; Digital Platforms</option>
+                <option value="consulting">Technology Consulting &amp; Digital Transformation</option>
+                <option value="product">Product Development &amp; Licensing</option>
+                <option value="integration">Systems Integration &amp; Implementation</option>
+                <option value="support">Support, Maintenance &amp; Training</option>
+                <option value="innovation">Innovation &amp; Emerging Technologies</option>
+                <option value="partnership">Partnerships &amp; Collaborations</option>
+                <option value="unsure">Not sure yet — let’s talk</option>
+              </select>
+            </div>
+
+            <div class="field" data-field="scope">
+              <label for="f-scope">Tell us about your project</label>
+              <textarea
+                id="f-scope"
+                name="scope"
+                rows="3"
+                placeholder="What are you trying to build or fix? Any deadlines, systems or constraints we should know about?"
+              ></textarea>
+              <span class="field__error" data-error></span>
+            </div>
+
+            <p class="form__status" id="form-status" role="status">
+              <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12" style="color: var(--lime-ink)"><use href="#px-check" /></svg>
+              <span id="form-status-text"></span>
+            </p>
+
+            <button class="btn btn--primary" type="submit" style="width: 100%; height: 48px">
+              <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-arrow-right" /></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           FAQ
+           ================================================================ -->
+      <section class="section section--tight wrap" id="faq">
+        <div class="section__head" data-reveal>
+          <div class="section__title">
+            <p class="eyebrow">
+              <svg aria-hidden="true" class="px px--sm" viewBox="0 0 12 12"><use href="#px-prompt" /></svg>
+              FAQs
+            </p>
+            <h2 class="h2">Frequently Asked Questions</h2>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item" data-reveal>
+            <summary>
+              <span>What kind of work do you take on?</span>
+              <svg aria-hidden="true" class="px px--sm faq__chev" viewBox="0 0 12 12"><use href="#px-arrow-down" /></svg>
+            </summary>
+            <p class="faq__answer">
+              We design, develop and deliver practical technology solutions for individuals,
+              businesses and organisations.
+            </p>
+          </details>
+
+          <details class="faq__item" data-reveal>
+            <summary>
+              <span>Do you build custom software?</span>
+              <svg aria-hidden="true" class="px px--sm faq__chev" viewBox="0 0 12 12"><use href="#px-arrow-down" /></svg>
+            </summary>
+            <p class="faq__answer">
+              Yes. We build web, mobile and business applications tailored to your needs.
+            </p>
+          </details>
+
+          <details class="faq__item" data-reveal>
+            <summary>
+              <span>Can you help us decide what to build?</span>
+              <svg aria-hidden="true" class="px px--sm faq__chev" viewBox="0 0 12 12"><use href="#px-arrow-down" /></svg>
+            </summary>
+            <p class="faq__answer">
+              Yes. We turn complex challenges into clear, effective technology strategies —
+              including telling you when something isn’t worth building.
+            </p>
+          </details>
+
+          <details class="faq__item" data-reveal>
+            <summary>
+              <span>Can you work with our existing systems?</span>
+              <svg aria-hidden="true" class="px px--sm faq__chev" viewBox="0 0 12 12"><use href="#px-arrow-down" /></svg>
+            </summary>
+            <p class="faq__answer">
+              We connect technologies, platforms and processes to work seamlessly together,
+              and we can customise or improve the software you already run.
+            </p>
+          </details>
+
+          <details class="faq__item" data-reveal>
+            <summary>
+              <span>What happens after launch?</span>
+              <svg aria-hidden="true" class="px px--sm faq__chev" viewBox="0 0 12 12"><use href="#px-arrow-down" /></svg>
+            </summary>
+            <p class="faq__answer">
+              We keep your systems running smoothly with ongoing technical support and user
+              training, so your team isn’t left holding the manual.
+            </p>
+          </details>
+
+          <details class="faq__item" data-reveal>
+            <summary>
+              <span>Do you work with other technology providers?</span>
+              <svg aria-hidden="true" class="px px--sm faq__chev" viewBox="0 0 12 12"><use href="#px-arrow-down" /></svg>
+            </summary>
+            <p class="faq__answer">
+              Yes. We work with technology providers and industry leaders to deliver
+              stronger solutions than either of us would alone.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================================================================
+         FOOTER
+         ================================================================== -->
+    <footer class="footer">
+      <div class="wrap footer__grid">
+        <div class="stack gap-3">
+          <span class="brand__lockup" role="img" aria-label="Asynk IO">
+            <span class="brand__mark brand__mark--lg" aria-hidden="true">
+              <svg viewBox="0 0 36 33"><use href="#px-asynk" /></svg>
+            </span>
+            <svg class="brand__word brand__word--lg" viewBox="0 0 88 23" aria-hidden="true">
+              <use href="#px-asynk-word" />
+            </svg>
+          </span>
+          <p class="body" style="max-width: 44ch">
+            We design, develop and deliver practical technology solutions for individuals,
+            businesses and organisations.
+          </p>
+        </div>
+
+        <div class="stack gap-3">
+          <span class="mono">What We Do</span>
+          <nav class="footer__links" aria-label="Services">
+            <a href="#services">Custom Software</a>
+            <a href="#services">Consulting</a>
+            <a href="#services">Product Development</a>
+            <a href="#services">Systems Integration</a>
+            <a href="#services">Support &amp; Training</a>
+            <a href="#services">Innovation</a>
+            <a href="#services">Partnerships</a>
+            <a href="#contact">Something else</a>
+          </nav>
+        </div>
+
+        <div class="stack gap-3">
+          <span class="mono">Next Step</span>
+          <p class="body--sm">
+            Tell us what you’re working on and we’ll come back with a clear next step.
+          </p>
+          <div>
+            <a class="btn btn--primary" href="#contact">Start a Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap footer__bottom">
+        <div class="row gap-5">
+          <span>© 2026 Asynk IO. All rights reserved.</span>
+        </div>
+        <nav aria-label="Footer">
+          <a href="#services">What We Do</a>
+          <a href="#faq">FAQs</a>
+          <a href="#top">Back to top</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="scripts/app.js?v=2" defer></script>
+  </body>
+</html>
