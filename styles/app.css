@@ -137,14 +137,6 @@ button {
   color: var(--ink-2);
 }
 
-.hl {
-  background: var(--lime);
-  color: var(--lime-ink);
-  border-radius: var(--r-xs);
-  padding: 0 0.12em;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
 
 /* --------------------------------------------------------------------------
    Layout

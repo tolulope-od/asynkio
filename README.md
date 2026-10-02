@@ -88,7 +88,7 @@ surface as light, paper-toned UI:
 |---|---|
 | **Page** | Off-white paper `#F5F5F1`, white cards, 1px warm hairlines |
 | **Ink** | Near-black `#0A0A0B` with a two-step muted grey for secondary text |
-| **Accent** | A lime `#CFFF55` for the headline highlight, primary CTA and pixel accents |
+| **Accent** | A lime `#CFFF55` for the primary CTA and pixel accents |
 | **Support** | Cyan `#0D7F8C` and violet `#6B3FD4` carry the telemetry accents the dark design leaned on |
 | **Console** | The one dark surface — a black terminal inset into the light page, so the “system” motif survives |
 | **Type** | Inter for display/body, Pixelify Sans for the pixel chrome, JetBrains Mono in the console, Kalam for one hand-drawn annotation — all SIL OFL, all self-hosted |
