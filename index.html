@@ -1,22 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- 1. Technical & Character Encoding -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="content-language" content="en" />
+
+    <!-- 2. Primary SEO & Discovery -->
     <title>Asynk IO — Technology Built for What’s Next</title>
     <meta
       name="description"
-      content="We design, develop and deliver practical technology solutions for individuals, businesses and organisations."
+      content="We design, develop and deliver practical technology solutions for individuals, businesses and organisations. Custom software, consulting, systems integration and support."
     />
-    <meta name="theme-color" content="#F5F5F1" />
+    <meta
+      name="keywords"
+      content="Asynk IO, custom software development, digital platforms, systems integration, technology consulting, product development, technology solutions, software engineering"
+    />
+    <meta name="author" content="Asynk IO" />
+    <meta name="publisher" content="Asynk IO" />
+    <meta name="creator" content="Asynk IO" />
+    <meta name="copyright" content="© 2026 Asynk IO. All rights reserved." />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://asynkio.com/" />
+    <link rel="alternate" hreflang="en" href="https://asynkio.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://asynkio.com/" />
+
+    <!-- 3. Web Feeds, Manifest & Verification Links -->
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="author" href="humans.txt" />
+    <meta name="category" content="Technology &amp; Software Development" />
+    <meta name="classification" content="Business, Technology, Software Solutions" />
+    <meta name="rating" content="General" />
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- 4. Open Graph / Facebook / LinkedIn / Slack / WhatsApp Previews -->
+    <meta property="og:site_name" content="Asynk IO" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://asynkio.com/" />
     <meta property="og:title" content="Asynk IO — Technology Built for What’s Next" />
     <meta
       property="og:description"
-      content="We design, develop and deliver practical technology solutions for individuals, businesses and organisations."
+      content="We design, develop and deliver practical technology solutions for individuals, businesses and organisations. Custom software, consulting, systems integration and support."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/logo/lockup.svg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://asynkio.com/assets/og-image.png" />
+    <meta property="og:image:secure_url" content="https://asynkio.com/assets/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Asynk IO — Technology Built for What’s Next" />
+
+    <!-- 5. Twitter / X Card Previews -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@asynkio" />
+    <meta name="twitter:creator" content="@asynkio" />
+    <meta name="twitter:title" content="Asynk IO — Technology Built for What’s Next" />
+    <meta
+      name="twitter:description"
+      content="We design, develop and deliver practical technology solutions for individuals, businesses and organisations. Custom software, consulting, systems integration and support."
+    />
+    <meta name="twitter:image" content="https://asynkio.com/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="Asynk IO — Technology Built for What’s Next" />
+
+    <!-- 6. Mobile Web App, Apple & Windows Tile Configuration -->
+    <meta name="application-name" content="Asynk IO" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Asynk IO" />
+    <meta name="msapplication-TileColor" content="#0A0A0B" />
+    <meta name="msapplication-config" content="browserconfig.xml" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F5F1" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A0A0B" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Favicon and Touch Icons -->
     <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo/apple-touch-icon.png" />
+    <link rel="mask-icon" href="assets/logo/favicon.svg" color="#0A0A0B" />
+
+    <!-- 7. Company Telemetry & System Metadata -->
+    <meta name="generator" content="Asynk IO" />
+    <meta name="app-version" content="1.0.0" />
+    <meta name="environment" content="production" />
+    <meta name="deployment-id" content="asynk-io-2026" />
+    <meta name="telemetry-provider" content="performance-observer" />
+    <meta name="telemetry-reporting" content="enabled" />
+    <meta name="telemetry-privacy" content="strict" />
+
+    <!-- 8. Structured Data: Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://asynkio.com/#organization",
+          "name": "Asynk IO",
+          "alternateName": "AsynkIO",
+          "url": "https://asynkio.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://asynkio.com/assets/logo/lockup.svg",
+            "caption": "Asynk IO Logo"
+          },
+          "image": "https://asynkio.com/assets/og-image.png",
+          "description": "We design, develop and deliver practical technology solutions for individuals, businesses and organisations.",
+          "slogan": "Technology Built for What’s Next",
+          "knowsAbout": [
+            "Custom Software & Digital Platforms",
+            "Technology Consulting & Digital Transformation",
+            "Product Development & Licensing",
+            "Systems Integration & Implementation",
+            "Support, Maintenance & Training",
+            "Innovation & Emerging Technologies",
+            "Technology Partnerships & Collaborations"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "technical and project inquiries",
+            "url": "https://asynkio.com/#contact"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://asynkio.com/#website",
+          "url": "https://asynkio.com/",
+          "name": "Asynk IO",
+          "description": "Practical technology solutions for individuals, businesses and organisations.",
+          "publisher": {
+            "@id": "https://asynkio.com/#organization"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://asynkio.com/#webpage",
+          "url": "https://asynkio.com/",
+          "name": "Asynk IO — Technology Built for What’s Next",
+          "isPartOf": {
+            "@id": "https://asynkio.com/#website"
+          },
+          "about": {
+            "@id": "https://asynkio.com/#organization"
+          },
+          "description": "We design, develop and deliver practical technology solutions for individuals, businesses and organisations."
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://asynkio.com/#services-list",
+          "name": "What We Do",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Custom Software & Digital Platforms",
+              "description": "Custom web, mobile and business applications built for scale."
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Technology Consulting & Digital Transformation",
+              "description": "Strategic guidance to navigate technology choices and modernise systems."
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Product Development & Licensing",
+              "description": "End-to-end digital product design, launch, and proprietary solutions."
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Systems Integration & Implementation",
+              "description": "Connecting software, platforms and data pipelines for seamless operations."
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Support, Maintenance & Training",
+              "description": "Reliable technical support, ongoing maintenance, and team training."
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Innovation & Emerging Technologies",
+              "description": "Research and applied solutions in automation, AI, and next-gen tech."
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Partnerships & Collaborations",
+              "description": "Working with technology leaders to deliver comprehensive solutions."
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://asynkio.com/#faq-schema",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What kind of work do you take on?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We design, develop and deliver practical technology solutions for individuals, businesses and organisations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you build custom software?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We build web, mobile and business applications tailored to your needs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you help us decide what to build?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We turn complex challenges into clear, effective technology strategies — including telling you when something isn’t worth building."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you work with our existing systems?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We connect technologies, platforms and processes to work seamlessly together, and we can customise or improve the software you already run."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens after launch?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We keep your systems running smoothly with ongoing technical support and user training, so your team isn’t left holding the manual."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you work with other technology providers?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We work with technology providers and industry leaders to deliver stronger solutions than either of us would alone."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- 9. Asset Preloading -->
     <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/pixelify-sans.woff2" as="font" type="font/woff2" crossorigin />
     <script>

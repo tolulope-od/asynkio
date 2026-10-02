@@ -402,6 +402,99 @@
   }
 
   /* ------------------------------------------------------------------
+     Telemetry — standard client-side performance observability
+     Instruments Core Web Vitals (LCP, CLS, INP, FCP, TTFB) via
+     PerformanceObserver. Zero external network requests by default.
+     Data is available programmatically on window.__asynkTelemetry.
+     ------------------------------------------------------------------ */
+  function initTelemetry() {
+    const telemetry = {
+      version: "1.0.0",
+      metrics: {},
+      events: [],
+      record(name, value, meta = {}) {
+        const rounded = typeof value === "number" ? Math.round(value * 100) / 100 : value;
+        telemetry.metrics[name] = rounded;
+        telemetry.events.push({ name, value: rounded, timestamp: Date.now(), ...meta });
+        const endpointMeta = document.querySelector('meta[name="telemetry-endpoint"]');
+        const endpoint = endpointMeta ? endpointMeta.getAttribute("content") : null;
+        if (endpoint && typeof navigator.sendBeacon === "function") {
+          try {
+            navigator.sendBeacon(endpoint, JSON.stringify({ name, value: rounded, meta }));
+          } catch (_) {}
+        }
+      },
+      getMetrics() {
+        return { ...telemetry.metrics };
+      },
+    };
+
+    window.__asynkTelemetry = telemetry;
+
+    if (!("PerformanceObserver" in window)) return;
+
+    try {
+      // First Contentful Paint & Paint timings
+      const paintObserver = new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.name === "first-contentful-paint") {
+            telemetry.record("FCP", entry.startTime);
+          }
+        }
+      });
+      paintObserver.observe({ type: "paint", buffered: true });
+
+      // Largest Contentful Paint (LCP)
+      const lcpObserver = new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        if (lastEntry) {
+          telemetry.record("LCP", lastEntry.startTime);
+        }
+      });
+      lcpObserver.observe({ type: "largest-contentful-paint", buffered: true });
+
+      // Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            telemetry.record("CLS", clsValue);
+          }
+        }
+      });
+      clsObserver.observe({ type: "layout-shift", buffered: true });
+
+      // Interaction to Next Paint (INP) / First Input Delay (FID)
+      const firstInputObserver = new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          const delay = entry.processingStart - entry.startTime;
+          telemetry.record("FID", delay);
+        }
+      });
+      firstInputObserver.observe({ type: "first-input", buffered: true });
+
+      // Navigation Timing / TTFB
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          try {
+            const navEntries = performance.getEntriesByType("navigation");
+            if (navEntries.length > 0) {
+              const nav = navEntries[0];
+              telemetry.record("TTFB", nav.responseStart);
+              telemetry.record("DomContentLoaded", nav.domContentLoadedEventEnd);
+              telemetry.record("LoadTime", nav.loadEventEnd);
+            }
+          } catch (_) {}
+        }, 0);
+      });
+    } catch (_) {
+      // Graceful degradation on browsers with restricted PerformanceObserver support
+    }
+  }
+
+  /* ------------------------------------------------------------------
      Boot
      ------------------------------------------------------------------ */
   function boot() {
@@ -410,6 +503,7 @@
     initScrollSpy();
     initConsole();
     initContactForm();
+    initTelemetry();
   }
 
   if (document.readyState === "loading") {

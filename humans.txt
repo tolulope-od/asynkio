@@ -1,0 +1,10 @@
+/* TEAM */
+Company: Asynk IO
+Site: https://asynkio.com
+Contact: https://asynkio.com/#contact
+
+/* SITE */
+Standards: HTML5, CSS3, ES2022, SVG, WAI-ARIA
+Typography: Inter, Pixelify Sans, JetBrains Mono, Kalam
+Zero Dependencies: No external trackers, self-hosted fonts & assets
+Built for What's Next.

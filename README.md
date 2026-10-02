@@ -306,18 +306,30 @@ Screenshots of every section are in [`screenshots/`](screenshots/).
 
 ```
 asynk-io/
-├── index.html              the page (pixel sprite inlined between markers)
-├── server.mjs              static server
+├── index.html              the page (SEO meta, JSON-LD, pixel sprite)
+├── server.mjs              static server with clean URLs & MIME types
+├── sitemap.xml             search engine indexation sitemap
+├── robots.txt              crawler directives & sitemap location
+├── site.webmanifest        PWA manifest and app icons
+├── browserconfig.xml       Windows tile configuration
+├── humans.txt              site team & standards declaration
+├── favicon.ico             root browser/crawler favicon
+├── .well-known/
+│   └── security.txt        RFC 9116 security disclosure policy
 ├── styles/
 │   ├── tokens.css          palette, type, spacing, elevation, @font-face
 │   └── app.css             components and layout
-├── scripts/app.js          drawer, scroll-spy, console, contact form
+├── scripts/
+│   └── app.js              drawer, scroll-spy, console, form, telemetry
 ├── assets/
 │   ├── fonts/              self-hosted woff2 (all SIL OFL)
-│   ├── logo/               mark, wordmark, lockup, favicon (vector)
-│   └── pixel/              generated icon sprite
+│   ├── logo/               mark, wordmark, lockup, favicon, app icons
+│   ├── pixel/              generated icon sprite
+│   ├── og-image.png        1200x630 social preview card (Twitter/Slack/LinkedIn)
+│   └── og-image.svg        vector source for the preview card
 ├── tools/
 │   ├── gen-assets.mjs      pixel-map → SVG sprite generator
+│   ├── gen-media.mjs       social preview card & raster favicon generator
 │   ├── cdp.mjs             minimal Chrome DevTools Protocol driver
 │   └── verify.mjs          24-check verification suite
 └── screenshots/

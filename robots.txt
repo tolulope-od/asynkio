@@ -1,0 +1,12 @@
+# https://asynkio.com/robots.txt
+User-agent: *
+Allow: /
+
+# Disallow non-public internal paths
+Disallow: /api/
+
+# Crawl-delay / rate limits
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://asynkio.com/sitemap.xml

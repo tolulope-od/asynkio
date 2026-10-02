@@ -42,6 +42,7 @@ const MIME = {
   ".m4s": "video/iso.segment",
   ".txt": "text/plain; charset=utf-8",
   ".xml": "application/xml",
+  ".webmanifest": "application/manifest+json",
 };
 
 /**

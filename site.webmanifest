@@ -1,0 +1,31 @@
+{
+  "name": "Asynk IO — Technology Built for What’s Next",
+  "short_name": "Asynk IO",
+  "description": "We design, develop and deliver practical technology solutions for individuals, businesses and organisations.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5F5F1",
+  "theme_color": "#F5F5F1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/logo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"]
+}
